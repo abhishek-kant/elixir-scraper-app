@@ -1,9 +1,9 @@
-defmodule ScraperStore.Brand do
+defmodule ScraperStore.ImageSource do
   use ScraperStore.Web, :model
 
-  schema "brands" do
-    has_many :products, ScraperStore.Product
-    field :name, :string
+  schema "image_sources" do
+    field :url, :string
+
     timestamps()
   end
 
@@ -12,7 +12,7 @@ defmodule ScraperStore.Brand do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name])
-    |> validate_required([:name])
+    |> cast(params, [:url])
+    |> validate_required([:url])
   end
 end

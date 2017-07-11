@@ -1,9 +1,9 @@
-defmodule ScraperStore.Brand do
+defmodule ScraperStore.Taxonomy do
   use ScraperStore.Web, :model
 
-  schema "brands" do
-    has_many :products, ScraperStore.Product
+  schema "taxonomies" do
     field :name, :string
+    has_many :categories, ScraperStore.Category
     timestamps()
   end
 
