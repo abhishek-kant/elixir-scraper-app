@@ -19,7 +19,7 @@ defmodule ScraperStore.Mixfile do
   def application do
     [mod: {ScraperStore, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :httpoison, :poison, :exq]]
+                    :phoenix_ecto, :postgrex, :httpoison, :poison, :exq, :hound]]
   end
 
   # Specifies which paths to compile per environment.
@@ -42,7 +42,8 @@ defmodule ScraperStore.Mixfile do
      {:floki, "~> 0.17.0"},
      {:html5ever, "~> 0.3.0"},
      {:poison,">= 0.0.0"},
-     {:exq, "~> 0.9.0"}
+     {:exq, "~> 0.9.0"},
+     {:hound, "~> 1.0"}
 
      ]
   end

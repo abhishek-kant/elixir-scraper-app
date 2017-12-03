@@ -42,3 +42,5 @@ config :exq,
   scheduler_enable: true,
   max_retries: 25,
   shutdown_timeout: 5000
+
+config :hound, driver: "phantomjs"
